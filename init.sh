@@ -13,5 +13,5 @@ echo 'anchor peer caixabank'
 configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/CaixabankMSPanchors.tx -channelID $CHANNEL_NAME -asOrg CaixabankMSP
 
 echo 'anchor peer santander'
-configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/SantanderMSPanchors.tx -channelID $CHANNEL_NAME -asOrg SantanderMSP
+configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/AlastriaMSPanchors.tx -channelID $CHANNEL_NAME -asOrg AlastriaMSP
 
