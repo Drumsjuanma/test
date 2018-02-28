@@ -50,60 +50,25 @@ services:
       - 7051:7051
       - 7053:7053
 
-  peer1.caixabank.alastria.com:
-    container_name: peer1.caixabank.alastria.com
+ 
+
+  peer0.alastria.alastria.com:
+    container_name: peer0.alastria.alastria.com
     extends:
       file: peer-base.yaml
       service: peer-base
     environment:
-      - CORE_PEER_ID=peer.caixabank.alastria.com
-      - CORE_PEER_ADDRESS=peer1.caixabank.alastria.com:7051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.caixabank.alastria.com:7051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.caixabank.alastria.com:7051
-      - CORE_PEER_LOCALMSPID=CaixabankMSP
+      - CORE_PEER_ID=peer0.alastria.alastria.com
+      - CORE_PEER_ADDRESS=peer0.alastria.alastria.com:7051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.alastria.alastria.com:7051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.alastria.alastria.com:7051
+      - CORE_PEER_LOCALMSPID=alastriaMSP
     volumes:
         - /var/run/:/host/var/run/
-        - ../crypto-config/peerOrganizations/caixabank.alastria.com/peers/peer1.caixabank.alastria.com/msp:/etc/hyperledger/fabric/msp
-        - ../crypto-config/peerOrganizations/caixabank.alastria.com/peers/peer1.caixabank.alastria.com/tls:/etc/hyperledger/fabric/tls
-
-    ports:
-      - 8051:7051
-      - 8053:7053
-
-  peer0.santander.alastria.com:
-    container_name: peer0.santander.alastria.com
-    extends:
-      file: peer-base.yaml
-      service: peer-base
-    environment:
-      - CORE_PEER_ID=peer0.santander.alastria.com
-      - CORE_PEER_ADDRESS=peer0.santander.alastria.com:7051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.santander.alastria.com:7051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.santander.alastria.com:7051
-      - CORE_PEER_LOCALMSPID=SantanderMSP
-    volumes:
-        - /var/run/:/host/var/run/
-        - ../crypto-config/peerOrganizations/santander.alastria.com/peers/peer0.santander.alastria.com/msp:/etc/hyperledger/fabric/msp
-        - ../crypto-config/peerOrganizations/santander.alastria.com/peers/peer0.santander.alastria.com/tls:/etc/hyperledger/fabric/tls
+        - ../crypto-config/peerOrganizations/alastria.alastria.com/peers/peer0.alastria.alastria.com/msp:/etc/hyperledger/fabric/msp
+        - ../crypto-config/peerOrganizations/alastria.alastria.com/peers/peer0.alastria.alastria.com/tls:/etc/hyperledger/fabric/tls
     ports:
       - 9051:7051
       - 9053:7053
 
-  peer1.santander.alastria.com:
-    container_name: peer1.santander.alastria.com
-    extends:
-      file: peer-base.yaml
-      service: peer-base
-    environment:
-      - CORE_PEER_ID=peer1.santander.alastria.com
-      - CORE_PEER_ADDRESS=peer1.santander.alastria.com:7051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.santander.alastria.com:7051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.santander.alastria.com:7051
-      - CORE_PEER_LOCALMSPID=SantanderMSP
-    volumes:
-        - /var/run/:/host/var/run/
-        - ../crypto-config/peerOrganizations/santander.alastria.com/peers/peer1.santander.alastria.com/msp:/etc/hyperledger/fabric/msp
-        - ../crypto-config/peerOrganizations/santander.alastria.com/peers/peer1.santander.alastria.com/tls:/etc/hyperledger/fabric/tls
-    ports:
-      - 10051:7051
-      - 10053:7053
+  

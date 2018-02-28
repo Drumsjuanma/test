@@ -26,29 +26,15 @@ services:
     networks:
       - byfn
 
-  peer1.caixabank.alastria.com:
-    container_name: peer1.caixabank.alastria.com
+
+  peer0.alastria.alastria.com:
+    container_name: peer0.alastria.alastria.com
     extends:
       file:  base/docker-compose-base.yaml
-      service: peer1.caixabank.alastria.com
+      service: peer0.alastria.alastria.com
     networks:
       - byfn
 
-  peer0.santander.alastria.com:
-    container_name: peer0.santander.alastria.com
-    extends:
-      file:  base/docker-compose-base.yaml
-      service: peer0.santander.alastria.com
-    networks:
-      - byfn
-
-  peer1.santander.alastria.com:
-    container_name: peer1.santander.alastria.com
-    extends:
-      file:  base/docker-compose-base.yaml
-      service: peer1.santander.alastria.com
-    networks:
-      - byfn
 
   cli:
     container_name: cli
@@ -77,8 +63,6 @@ services:
     depends_on:
       - orderer.alastria.com
       - peer0.caixabank.alastria.com
-      - peer1.caixabank.alastria.com
-      - peer0.santander.alastria.com
-      - peer1.santander.alastria.com
+      - peer0.alastria.alastria.com
     networks:
       - byfn
