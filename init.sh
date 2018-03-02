@@ -12,6 +12,6 @@ export CHANNEL_NAME=mychannel  && configtxgen -profile TwoOrgsChannel -outputCre
 echo 'anchor peer caixabank'
 configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/CaixabankMSPanchors.tx -channelID $CHANNEL_NAME -asOrg CaixabankMSP
 
-echo 'anchor peer santander'
+echo 'anchor peer alastria'
 configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/AlastriaMSPanchors.tx -channelID $CHANNEL_NAME -asOrg AlastriaMSP
 
