@@ -62,7 +62,7 @@ services:
       - CORE_PEER_ADDRESS=peer0.alastria.alastria.com:7051
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.alastria.alastria.com:7051
       - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.alastria.alastria.com:7051
-      - CORE_PEER_LOCALMSPID=alastriaMSP
+      - CORE_PEER_LOCALMSPID=AlastriaMSP
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/alastria.alastria.com/peers/peer0.alastria.alastria.com/msp:/etc/hyperledger/fabric/msp
