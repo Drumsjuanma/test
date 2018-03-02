@@ -41,7 +41,7 @@ Profiles:
 Organizations:
 
     - &OrdererOrg
-        Name: OrdererOrg
+        Name: OrdererMSP
         ID: OrdererMSP
         MSPDir: crypto-config/ordererOrganizations/alastria.com/msp
 
