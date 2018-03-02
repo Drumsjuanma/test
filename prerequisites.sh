@@ -35,6 +35,7 @@ elif [ $OS = "ubuntu" ];then
   apt-get install curl
 fi
 
+curl -sSL https://goo.gl/kFFqh5 | bash -s 1.0.6
 
 echo 'Instalacion completada'
 
