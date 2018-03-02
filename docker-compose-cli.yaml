@@ -6,7 +6,7 @@
 version: '2'
 
 networks:
-  byfn:
+  alastriaNet:
 
 services:
 
@@ -16,7 +16,7 @@ services:
       service: orderer.alastria.com
     container_name: orderer.alastria.com
     networks:
-      - byfn
+      - alastriaNet
 
   peer0.caixabank.alastria.com:
     container_name: peer0.caixabank.alastria.com
@@ -24,7 +24,7 @@ services:
       file:  base/docker-compose-base.yaml
       service: peer0.caixabank.alastria.com
     networks:
-      - byfn
+      - alastriaNet
 
 
   peer0.alastria.alastria.com:
@@ -33,7 +33,7 @@ services:
       file:  base/docker-compose-base.yaml
       service: peer0.alastria.alastria.com
     networks:
-      - byfn
+      - alastriaNet
 
 
   cli:
@@ -65,4 +65,4 @@ services:
       - peer0.caixabank.alastria.com
       - peer0.alastria.alastria.com
     networks:
-      - byfn
+      - alastriaNet
