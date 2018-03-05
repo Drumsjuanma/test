@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 echo -e '\e[92m//////// --- Creando certificados --- ////////\e[39m'
 cryptogen generate --config ./crypto-config.yaml
 
