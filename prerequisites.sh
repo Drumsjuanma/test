@@ -17,9 +17,7 @@ if [ $OS = "centos" ] || [ $OS = "rhel" ];then
 elif [ $OS = "ubuntu" ];then
   echo "Installing the environment in " + $OS 
   
-  #GNU libtool: libltdl-dev
-  apt-get install libltdl-dev
-
+ 
   #Install Docker
   wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/docker-ce_17.06.0~ce-0~ubuntu_amd64.deb
   dpkg -i docker-ce_17.06.0~ce-0~ubuntu_amd64.deb
