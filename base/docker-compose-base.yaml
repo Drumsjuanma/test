@@ -9,7 +9,7 @@ services:
 
   orderer.alastria.com:
     container_name: orderer.alastria.com
-    image: hyperledger/fabric-orderer
+    image: hyperledger/fabric-orderer$IMAGE_TAG
     environment:
       - ORDERER_GENERAL_LOGLEVEL=debug
       - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
@@ -68,7 +68,7 @@ services:
         - ../crypto-config/peerOrganizations/alastria.alastria.com/peers/peer0.alastria.alastria.com/msp:/etc/hyperledger/fabric/msp
         - ../crypto-config/peerOrganizations/alastria.alastria.com/peers/peer0.alastria.alastria.com/tls:/etc/hyperledger/fabric/tls
     ports:
-      - 9051:7051
-      - 9053:7053
+      - 8051:7051
+      - 8053:7053
 
   
