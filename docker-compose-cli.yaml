@@ -5,6 +5,11 @@
 
 version: '2'
 
+volumes:
+  orderer.alastria.com:
+  peer0.caixabank.alastria.com:
+  peer0.alastria.alastria.com:
+
 networks:
   alastriaNet:
 
@@ -38,7 +43,7 @@ services:
 
   cli:
     container_name: cli
-    image: hyperledger/fabric-tools
+    image: hyperledger/fabric-tools:$IMAGE_TAG
     tty: true
     environment:
       - GOPATH=/opt/gopath
